@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background-color: rgb(211, 211, 211);
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    min-width: 400px;
+    height: 100vh;
+    max-height: 700px;
+    flex-direction: column;
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.349), -5px -5px 20px rgba(255, 255, 255, 0.753);
+    background-color: rgb(255, 255, 255); 
+}
+
+h2.title{
+    margin: 50px auto;
+    color: rgb(75, 75, 75);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50vh;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(168, 168, 168); 
+    border-radius: 4px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.box {
+    margin: 10px auto;
+    min-width: 22.5vw;
+    width: 350px;
+    height: 7vh;
+    border: 1px solid rgba(0, 0, 0, 0.555);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    flex: 0 1 0%;
+}
+
+.box .action{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 20%;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+}
+
+.box input.todo {
+    border: none;
+    outline: none;
+    flex: 1 1 0%;
+    background: transparent;
+}
+
+.action img.delete {
+    margin: 0 5px;
+    position: absolute;
+}
+
+.action img.edit {
+    margin: 0 50px;
+    position: absolute;
+    width: 8%;
+}
+
+.action img.save {
+    margin: 0 50px;
+    position: absolute;
+    width: 8%;
+    display: none;
+}
+
+img {
+    width: 10%;
+    cursor: pointer;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+form input {
+    min-width: 20vw;
+    width: 200px;
+    height: 7vh;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.555);
+    border-radius: 10px;
+    padding: 5%;
+}
+
+h3.list-title{
+    align-self: flex-start;
+    margin: 0 40px;
+    font-weight: 500;
+    color: rgb(58, 58, 58);
+}
