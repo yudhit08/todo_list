@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
     const input = document.querySelector('#new-task-input')
     const cardTask = document.querySelector('.card')
     const addBtn = document.querySelector('#add-task-btn')
+    const saveList = document.querySelector('.save')
 
     addBtn.addEventListener('click', submitTask)
 
@@ -88,28 +89,14 @@ window.addEventListener('load', () => {
             cardTask.removeChild(boxTask)
         })
     }
+
+    saveList.addEventListener('click', () => {
+        html2canvas(document.querySelector('body'), {
+            onrendered : function(canvas) {
+                canvas.toBlob(function(blob) {
+                    saveAs(blob, "myList.png")
+                })
+            }
+        })
+    })
 })
-
-
-
-
-
-// deleteTask.addEventListener('click', function(){
-//     cardTask.classList.remove('box')
-//     cardTask.parentNode.removeChild(box)
-// })
-
-// inputTask.addEventListener('keypress', function(event){
-//     if (event.key === 'Enter') {
-//         event.preventDefault()
-//         document.getElementById('add-task-btn').click()
-//         addList()
-//     }
-// })
-
-// addTaskBtn.addEventListener('click', addList)
-
-// function addList()
-// {
-//     addTodo.innerText = inputTask.value
-// }
